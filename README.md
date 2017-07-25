@@ -26,6 +26,10 @@ The commands added by this plugin are as follows:
 | `ulx revive <player(s)>`     | `!revive`                         | Revives target(s).                                |
 | `ulx toggleff`               | `!toggleff`                       | Toggles friendly fire.                            |
 | `ulx togglepickup`           | `!togglepickup`                   | Toggles item pickup.                              |
+| `ulx showdeath <player>`     | `!showdeath`                      | Teleports to the position where the target died.  |
+| `ulx teleportguards`         | `!teleportguards` <br> `!tpg`     | Teleports all guards to the warden.               |
+| `ulx opencells`              | `!opencells` <br> `!open`         | Opens cell doors.                                 |
+
 
 ## License
 	ULX Commands for Jailbreak 7

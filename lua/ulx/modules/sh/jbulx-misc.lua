@@ -52,7 +52,7 @@ function ulx.togglepickup( calling_ply )
 		ulx.fancyLogAdmin(calling_ply,"#A toggled item pickup")
 	end
 end
-local togglepickup = ulx.command(CATEGORY_NAME,"ulx togglepickup",ulx.togglepickup,{"!togglepickup","!tpu","!togglepu","!tpickup","!pickup"})
+local togglepickup = ulx.command(CATEGORY_NAME,"ulx togglepickup",ulx.togglepickup,{"!togglepickup","!pu","!togglepu","!tpickup","!pickup"})
 togglepickup:defaultAccess(ULib.ACCESS_ADMIN)
 togglepickup:help("Toggles item pickup.")
 

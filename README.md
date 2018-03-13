@@ -33,7 +33,7 @@ The commands added by this plugin are as follows:
 | `ulx slaynr <player(s)> [rounds]`  | `!slaynr`                                 | Slays target(s) for a given number of rounds.     |
 | `ulx rslaynr <player(s)> [rounds]` | `!rslaynr`                                | Removes slays from target(s).                     |
 | `ulx cslaynr <player>`             | `!cslaynr`                                | Checks how many slays a target has remaining.     |
-| `ulx showdeath <player>`           | `!showdeath` <br> `!tpdeath` <br> `tpd`   | Teleports to the position where the target died.  |
+| `ulx showdeath <player>`           | `!showdeath` <br> `!tpdeath` <br> `!tpd`  | Teleports to the position where the target died.  |
 | `ulx teleportguards`               | `!teleportguards` <br> `!tpg`             | Teleports all guards to the warden.               |
 | `ulx opencells`                    | `!opencells` <br> `!cells`                | Opens cell doors.                                 |
 | `ulx helicopter`                   | `!helicopter` <br> `!heli`                | Shuts down the helicopter on new_summer.          |

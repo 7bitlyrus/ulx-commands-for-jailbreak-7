@@ -111,7 +111,7 @@ function ulx.slaynr(calling_ply,target_plys,rounds,remove)
 end
 local slaynr = ulx.command(CATEGORY_NAME,"ulx slaynr",ulx.slaynr,"!slaynr")
 slaynr:addParam{type=ULib.cmds.PlayersArg}
-slaynr:addParam{type=ULib.cmds.NumArg,default=1,min=0,ULib.cmds.optional,ULib.cmds.round}
+slaynr:addParam{type=ULib.cmds.NumArg,default=1,min=0,hint="rounds",ULib.cmds.optional,ULib.cmds.round}
 slaynr:addParam{type=ULib.cmds.BoolArg,invisible=true}
 slaynr:defaultAccess(ULib.ACCESS_ADMIN)
 slaynr:help("Slay target(s) next round")

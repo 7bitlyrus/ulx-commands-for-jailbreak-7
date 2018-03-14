@@ -23,20 +23,18 @@ local cellDoorMap = {
   ["ba%_jail%_alcatraz"] = {"oben","unten"},
 
   ["jb%_parabellum"] = {"cells"},
+
+  ["ba%_jail%_canyondam"] = {"celldoors","celldoors2"},
+
+  ["jb%_castleguarddev"] = {"cell_door_main"},
+
+  ["jb%_kittens"] = {"cell_door_t"},
+
+  ["jb%_paradise%_prison"] = {"doorjail","trackjail"},
+
+  ["ba%_jail%_lockdown"] = {"cell_door_1","cell_door_2","cell_door_3","cell_door_4","cell_door_5","cell_door_6","cell_door_7","cell_door_8","cell_door_9","cell_door_10","cell_door_11","cell_door_12","cell_door_13","cell_door_14","cell_door_15","cell_door_16","cell_door_17"},
   
-  ["jb%_vipinthemix"] = {
-"Jaildoor_clip1",
-"Jaildoor_clip2",
-"Jaildoor_clip3",
-"Jaildoor_clip4",
-"Jaildoor_clip5",
-"Jaildoor_clip6",
-"Jaildoor_clip7",
-"Jaildoor_clip8",
-"Jaildoor_clip9",
-"Jaildoor_clip10",
-"Vipcel_door"
-}
+  ["jb%_vipinthemix"] = {"Jaildoor_clip1","Jaildoor_clip2","Jaildoor_clip3","Jaildoor_clip4","Jaildoor_clip5","Jaildoor_clip6","Jaildoor_clip7","Jaildoor_clip8","Jaildoor_clip9","Jaildoor_clip10","Vipcel_door"}
 
 }
 
@@ -79,15 +77,25 @@ mancannon:help("Open the mancannon on new_summer")
 function ulx.opencells(calling_ply)
   local doorsopened = false
 	for map,doors in pairs(cellDoorMap) do
-		if game.GetMap():find(map) then
+		if game.GetMap():find("ba%_jail%_minecraft%_beach") then
+			for _,v in ipairs(ents.FindByName("celldoors_closed")) do
+				v:Fire("Disable",1)
+			end
+			for _,v in ipairs(ents.FindByName("celldoors_open")) do
+				v:Fire("Enable",1)
+			end
+			ulx.fancyLogAdmin(calling_ply,"#A opened cell doors")
+			return
+		elseif game.GetMap():find(map) then
 			for k,door in pairs(cellDoorMap[map]) do
 				for _,v in ipairs(ents.FindByName(door)) do
                     v:Fire("Open",1)
                     v:Fire("Disable",1)
-        end
-      end
-      ulx.fancyLogAdmin(calling_ply,"#A opened cell doors")
-      return
+                    v:Fire("StartForward",1)
+        		end
+    		end
+    		ulx.fancyLogAdmin(calling_ply,"#A opened cell doors")
+    		return
 		end
 	end
     ULib.tsayError(calling_ply,"This command does not work on this map!",true)

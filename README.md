@@ -1,3 +1,5 @@
+**This repository has been archived.** It is no longer maintained and may no longer function with external services. If you're still interested  in this repository, [check for forks from other users](../../network) or [start your own](../../fork).
+___
 # ULX Commands for Jailbreak 7
 Garry's Mod Addon that adds [ULX](https://github.com/TeamUlysses/ulx) commands for [Excl's Jailbreak 7](https://github.com/kurt-stolle/jailbreak)
 
